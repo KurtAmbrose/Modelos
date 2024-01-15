@@ -1,3 +1,9 @@
+.DEFAULT_GOAL := all
+
+all: default clean
+
+.PHONY: clean
+
 default: principal.o funciones.o plot.o
 	gcc principal.o funciones.o plot.o -lm -o graficar.out
 
@@ -11,4 +17,4 @@ plot.o: plot.c
 	gcc -c plot.c
 
 clean:
-	rm -f *.o *~ *# *.out
+	rm -f *.o *~ *#
