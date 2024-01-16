@@ -15,11 +15,19 @@
 
 float funcion_1(float x);
 
+/**
+ * @brief Función que devuelve un valor de tipo float con una operación que realiza
+ * @details La operación a realizar es pow(x, 3) - 16) / (4.0 * x)
+ * @param Float: x
+ * @return El resultado de la operación: pow(x, 3) - 16) / (4.0 * x)
+ * @author Diego Bravo Pérez
+*/
+
 /** Parte privada */
 
 #include <math.h>
 
 float funcion_1(float x)
 {
-  return (0.25 * pow(x, 3) -4) / x;
+  return (pow(x, 3) - 16) / (4.0 * x);
 }
