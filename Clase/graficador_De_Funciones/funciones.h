@@ -25,3 +25,5 @@ float funcion_1(float x);
  * @author Diego Bravo Pérez
 */
 
+float funcion_2(float x);
+

@@ -27,26 +27,29 @@ int main(int argc, char *argv[])
   float x0, xf, h;
 
   if(argc != 4)
-  {
-    fputs("\nUsage: graficar.out <x inicial>, <x final>, <h>\n\n", stderr);
-  }
-  else
-  {
+    {
+      fputs("Usage: graficar.out <x0> <xf> <h>\n", stderr);
+      exit(1);
+    }
+  
     system("clear");
 
     printf("===============================================\n\tGENERADOR DE GRÁFICAS EN GNUPLOT\n===============================================\n\n");
 
     x0 = atof(argv[1]);
-
-    xf = atof(argv[2]); //Función que pasa un array a número real
-
+    xf = atof(argv[2]); //atof(); pasa datos de tipo string a float
     h = atof(argv[3]);
 
-    printf("%.2f, %.2f, %.2f\n\n", x0, xf, h);
-    
+    printf("x0: %.2f, xf: %.2f, h: %.2f\n\n", x0, xf, h);
+
+    //Genera las tablas
     generar_Tabla(funcion_1, x0, xf, h, "linea_1.txt");
+    generar_Tabla(funcion_2, x0, xf, h, "linea_2.txt");
+
+    //Grafica las tablas
     graficar_Linea_1(x0, xf, "linea_1.txt");
-  }
+    graficar_Linea_2(x0, xf, "linea_1.txt", "linea_2.txt");
+    
   
   return 0;
 }

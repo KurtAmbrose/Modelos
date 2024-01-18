@@ -15,3 +15,4 @@
 
 void generar_Tabla(float (*f)(float), float x0, float xf, float h, char archivo[]);
 void graficar_Linea_1(float x0, float xf, char archivo[]);
+void graficar_Linea_2(float x0, float xf, char archivo1[], char archivo2[]);

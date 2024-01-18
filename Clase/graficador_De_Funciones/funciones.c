@@ -23,6 +23,8 @@ float funcion_1(float x);
  * @author Diego Bravo Pérez
 */
 
+float funcion_2(float x);
+
 /** Parte privada */
 
 #include <math.h>
@@ -30,4 +32,9 @@ float funcion_1(float x);
 float funcion_1(float x)
 {
   return (pow(x, 3) - 16) / (4.0 * x);
+}
+
+float funcion_2(float x)
+{
+  return (0.25 * pow(x,3) - 4) / x + 5;
 }
