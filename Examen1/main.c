@@ -8,9 +8,9 @@
  *
  *@author Elaborado por: Diego Bravo Pérez
  *
- *@date Elaborado el día 15 de Enero del 2023
+ *@date Elaborado el día 31 de Enero del 2024
  *
- *@date Última actualización: 15 de Enero del 2023
+ *@date Última actualización: 31 de Enero del 2024
  *
  *
  */
@@ -99,6 +99,5 @@ int main(void)
 	    break;
 	  }
       }while(opc != 4);
-  
-  return 0;
+    return 0;
 }

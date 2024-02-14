@@ -2,13 +2,13 @@
  *  
  *@file plot.c
  *
- *@brief Este módulo contiene las funciones relacionadas a la creación de la tabla y trazado de la función a dibujar
+ *@brief Este módulo contiene las funciones relacionadas a la creación de las tablas y trazado de las funciónes a dibujar
  *
  *@author Elaborado por Diego Bravo Pérez
  *
- *@date Elaborado el día 15 de Enero del 2023
+ *@date Elaborado el día 31 de Enero del 2024
  *
- *@date Última actualización: 15 de Enero del 2023
+ *@date Última actualización: 31 de Enero del 2024
  *
  */
 

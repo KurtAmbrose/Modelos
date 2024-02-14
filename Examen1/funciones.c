@@ -1,13 +1,13 @@
 /**
  *@file funciones.c
  *
- *@brief Módulo donde estará desarrollados las funciones que se enviarán como parámetro para la función que genera la gráficaxs
+ *@brief Módulo donde estará desarrollados las funciones que se enviarán como parámetro para la función que genera la gráficas
  *
  *@author Elaborado por Diego Bravo Pérez
  *
- *@date Elaborado el día 15 de Enero del 2023
+ *@date Elaborado el día 31 de Enero del 2024
  *
- *@date Última actualización 15 de Enero del 2023
+ *@date Última actualización 31 de Enero del 2024
  *
  */
 
