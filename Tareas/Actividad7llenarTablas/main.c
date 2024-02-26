@@ -13,11 +13,9 @@
 */
 
 #include "funciones.h"
-#include "plot.h"
 #include "edo.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 
 /**
  * @brief Función principal
@@ -25,34 +23,45 @@
 
 int main(void)
 {
-    float a, b, y0, paso;
-    int n = 40;
+    float a, b, y0, h;
+    char opc;
 
     system("clear");
 
-    printf("===================================\n\tMÉTODO DE EULER\n===================================\n\n");
-
     //SE INGRESAN LOS DATOS 
-    printf("-> Ingresa el valor inicial de 't': ");
+    printf("\n-> Ingresa el valor inicial de 't': ");
     scanf("%f" , &a);
     printf("-> Ingresa el valor final de 't': ");
     scanf("%f" , &b);
     printf("-> Ingresa el valor de 'y(0)': ");
     scanf("%f" , &y0);
+    printf("-> Ingresa el valor de h: ");
+    scanf("%f", &h);
 
-    paso = (b-a) / n;
+    do
+    {
+        system("clear");
+        printf("-> a) Actividad 3\n-> b) Actividad 4\n");
+        printf("\n\t* Ingresa una opción: ");
+        scanf(" %c", &opc);
+        switch (opc)
+        {
+            case 'a':
+            imprimirTablaPantalla(a, b, y0, h, actividad3Real, actividad3Euler);
+            break;
 
-    //IMPRESIÓN PARA VERIFICAR SI LOS DATOS SE GUARDARON CON ÉXITO
-    printf("\n\t* Dominio: %.2f <= t <= %.2f\n", a, b);
-    printf("\t* Valor de y inicial: %.2f\n\t* Paso: %.2f\n\n", y0, paso);
-
-    //IMPRIME LA TABLA EN PANTALLA Y GENERA LOS DOS ARCHIVOS DE TEXTO PARA LA GRÁFICA
-    generarTablaEuler(a, b, y0, paso, n, euler, "euler.txt");
-    generarTablaReal(a, b, y0, paso, n, real, "real.txt");
-    imprimirTablaPantalla(a, b, y0, paso, n, real, euler);
-
-    //SE DIBUJA LA TABLA
-    graficarFunciones(a, b, y0, "real.txt", "euler.txt");
+            case 'b':
+            imprimirTablaPantalla(a, b, y0, h, actividad4Real, actividad4Euler);
+            break;
+            
+            default:
+            system("clear");
+            printf("INGRESA UNA OPCIÓN VÁLIDA\n\n");
+            break;
+        }
+    } while (opc != 'a' && opc != 'b');
+    
+    
 
     return 0;
 }
