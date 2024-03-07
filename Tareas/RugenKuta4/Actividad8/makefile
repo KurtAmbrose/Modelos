@@ -14,4 +14,4 @@ plot.o: plot.c
 	gcc -c plot.c
 
 clean:
-	rm -f *~ *# *.txt
+	rm -f *~
